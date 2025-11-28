@@ -2,7 +2,7 @@
   "name": "twist-turbo",
   "version": "0.0.0",
   "private": true,
-	"license": "MIT",
+  "license": "MIT",
   "scripts": {
     "lint": "turbo run lint",
     "format": "turbo run format",
@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "preview": "turbo run preview",
     "real-build-storybook": "turbo run real-build-storybook",
-    "storybook": "turbo run storybook",
+    "storybook": "cross-env PUBLIC_CHROMATIC=true storybook dev -p 6001 public",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish",
     "e2e": "turbo run e2e",
     "e2e-smoke": "turbo run e2e-smoke",
@@ -32,5 +32,8 @@
       "esbuild",
       "svelte-preprocess"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
