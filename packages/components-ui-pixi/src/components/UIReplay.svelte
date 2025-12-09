@@ -6,6 +6,7 @@
 	import LabelBet from './LabelBet.svelte';
 	import ButtonPayTable from './ButtonPayTable.svelte';
 	import ButtonGameRules from './ButtonGameRules.svelte';
+	import ButtonBet from './ButtonBet.svelte';
 	import ButtonSettings from './ButtonSettings.svelte';
 	import ButtonTurbo from './ButtonTurbo.svelte';
 	import ButtonMenu from './ButtonMenu.svelte';
@@ -18,6 +19,7 @@
 	import { getContext } from '../context';
 	import type { LayoutUiProps } from '../types';
 	import LabelFreeSpinCounter from './LabelFreeSpinCounter.svelte';
+	import ButtonReplayRespin from './ButtonReplayRespin.svelte';
 
 	type Props = {
 		gameName: LayoutUiProps['gameName'];
@@ -76,6 +78,14 @@
 			scale={0.7}
 		>
 			<ButtonTurbo />
+		</Container>
+
+		<Container
+			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 470}
+			y={context.stateLayoutDerived.mainLayoutStandard().height - 150 - 15}
+			scale={0.7}
+		>
+			<ButtonReplayRespin />
 		</Container>
 	</MainContainer>
 
