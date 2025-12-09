@@ -43,12 +43,14 @@
 		"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
 	},
 	"window.commandCenter": true,
-	"cSpell.words": [
-		"bigwin",
-		"Payline",
-		"pixi",
-		"xstate"
-	],
+	"cSpell.words": ["bigwin", "Payline", "pixi", "xstate"],
 	"workbench.editor.empty.hint": "hidden",
-	"scm.showHistoryGraph": false
+	"scm.showHistoryGraph": false,
+	"files.exclude": {
+		"**/apps/cluster": true,
+		"**/apps/lines": true,
+		"**/apps/number-picker": true,
+		"**/apps/price": true,
+		"**/apps/scatter": true
+	}
 }
