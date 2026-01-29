@@ -1,0 +1,1 @@
+{"skeleton":{"hash":"obV9EMj8vxYKxFmfR7bhV8BfCNs","spine":"3.8.75","x":-960,"y":-540,"width":1920,"height":1080,"images":"C:/Users/G/OneDrive/Desktop/dino rift","audio":""},"bones":[{"name":"root"}],"slots":[{"name":"bg_copy","bone":"root","attachment":"1"}],"skins":[{"name":"default","attachments":{"bg_copy":{"1":{"width":2752,"height":1536}}}}],"animations":{"idle":{}}}

@@ -5,14 +5,15 @@
 </script>
 
 <script lang="ts">
-	import { Sprite, SpineProvider, SpineTrack } from 'pixi-svelte';
+	import { SpineProvider, SpineTrack, Sprite } from 'pixi-svelte';
 
 	import { getContext } from '../game/context';
 
 	const context = getContext();
 	const SPINE_SCALE = { width: 0.62, height: 0.66 };
-	const SPRITE_SCALE = { width: 1.25, height: 0.72 };
-	const POSITION_ADJUSTMENT = 1.01;
+	const SPRITE_SCALE = { width: 1.4, height: 1.02 };
+	const X_POSITION_ADJUSTMENT = 1.026;
+	const Y_POSITION_ADJUSTMENT = 1.01;
 
 	type AnimationName = 'reelhouse_glow_start' | 'reelhouse_glow_idle' | 'reelhouse_glow_exit';
 
@@ -34,8 +35,8 @@
 	<SpineProvider
 		zIndex={-1}
 		key="reelhouse"
-		x={context.stateGameDerived.boardLayout().x * POSITION_ADJUSTMENT}
-		y={context.stateGameDerived.boardLayout().y * POSITION_ADJUSTMENT}
+		x={context.stateGameDerived.boardLayout().x * X_POSITION_ADJUSTMENT}
+		y={context.stateGameDerived.boardLayout().y * Y_POSITION_ADJUSTMENT}
 		width={context.stateGameDerived.boardLayout().width * SPINE_SCALE.width}
 		height={context.stateGameDerived.boardLayout().height * SPINE_SCALE.height}
 	>
@@ -63,6 +64,15 @@
 {/if}
 
 <Sprite
+	key="reel.png"
+	anchor={0.5}
+	x={context.stateGameDerived.boardLayout().x * X_POSITION_ADJUSTMENT}
+	y={context.stateGameDerived.boardLayout().y * Y_POSITION_ADJUSTMENT}
+	width={context.stateGameDerived.boardLayout().width * SPRITE_SCALE.width}
+	height={context.stateGameDerived.boardLayout().width * SPRITE_SCALE.height}
+/>
+
+<!-- <Sprite
 	key="frame_bg.png"
 	anchor={0.5}
 	x={context.stateGameDerived.boardLayout().x * POSITION_ADJUSTMENT}
@@ -78,4 +88,4 @@
 	y={context.stateGameDerived.boardLayout().y * POSITION_ADJUSTMENT}
 	width={context.stateGameDerived.boardLayout().width * SPRITE_SCALE.width}
 	height={context.stateGameDerived.boardLayout().width * SPRITE_SCALE.height}
-/>
+/> -->

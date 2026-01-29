@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Rectangle, SpineProvider, SpineTrack } from 'pixi-svelte';
 	import { FadeContainer } from 'components-pixi';
 	import { SECOND } from 'constants-shared/time';
+	import { Rectangle, SpineProvider, SpineTrack } from 'pixi-svelte';
 
 	import { getContext } from '../game/context';
 
@@ -18,9 +18,6 @@
 <FadeContainer show={showBaseBackground} duration={SECOND} zIndex={-2}>
 	<SpineProvider key="foregroundAnimation" {...backgroundProps}>
 		<SpineTrack trackIndex={0} animationName={'idle'} loop />
-	</SpineProvider>
-	<SpineProvider key="foregroundAnimation" {...backgroundProps}>
-		<SpineTrack trackIndex={0} animationName={'dust'} loop />
 	</SpineProvider>
 </FadeContainer>
 
